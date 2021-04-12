@@ -282,3 +282,24 @@ Use these short codes to get around''')
     Please use the short codes''')
                         print("\n")
 
+
+        elif short_code == 'ex':
+            '''
+            Exit Password Locker
+            '''
+            print("\n")
+            print("Bye .....")
+
+            break
+
+        else:
+            print("\n")
+            print(f'''Come again, what's {short_code}?
+    Please use the short codes''')
+            print("\n")
+
+if __name__ == '__main__':
+    main()
+
+
+
