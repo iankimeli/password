@@ -31,29 +31,54 @@ As a user I would like:
 
 
 To create an account with my details - log in and password
+
 Store my existing login credentials
+
 Generate a password for a new credential
+
 #Specifications
+
 Behavior	Input	Outcome
+
 Create an account	User Name : John
+
 Password : doe	An account is created
+
 Display account names	N/A	Display a list of user names for Password Locker accounts
+
 Log into an account	User Name : John
+
 Password : doe	Log into the users account
+
 Store existing log in credential	Account : Githib
+
 Password : doe1	Create and save the user's credentials
+
 Display a specific users credentials	N/A	List of the user's credentials
+
 Generate a password for a new credential	Account : Password Locker	Generate a password for the user.
+
 Create and save the user's credential with the generated password
+
 Log out	N/A	Log out of Password Locker account
+
 #Prerequisites
-Python3.6
+
+Python3.9
+
 #Setup/Installation Requirements
+
 Clone this repository and run the run.py file.
+
 #Known Bugs
+
 No known bugs
 
+
 #Technologies Used
+
 Python3.9
+
 #License
+
 MIT (c) 2021 Ian Kimeli
