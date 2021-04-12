@@ -1,5 +1,5 @@
 '''
-Run Module by Carol Wanjohi
+Run Module by Ian Kimeli
 
 This is the file that runs the application
 Import User Class from User Module and Credential Class from Credential Module
