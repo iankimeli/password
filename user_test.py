@@ -86,3 +86,28 @@ class TestUser(unittest.TestCase):
         '''
         Test case to test if a user can log into their credentials
         '''
+
+        # Save the new user
+        self.new_user.save_user()
+
+        test_user = User("Jane","doey")
+
+        test_user.save_user()
+
+        found_credential = User.log_in("Jane", "doey")
+
+        self.assertEqual( found_credential,  Credential.credential_list )   
+    
+    def test_display_user(self):
+        '''
+        Test case to test if a user can see a list of all the users saved
+        '''
+        
+        self.assertEqual( User.display_user() , User.user_list )
+        
+    def test_user_exist(self):
+        
+        '''
+        Test to check if we can return a boolean if we can't find the user
+        '''
+        
