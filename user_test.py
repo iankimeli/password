@@ -110,4 +110,19 @@ class TestUser(unittest.TestCase):
         '''
         Test to check if we can return a boolean if we can't find the user
         '''
+        # Save the new user
+        self.new_user.save_user()
+
+        test_user = User("Jane","doey")
+
+        test_user.save_user()
+        
+        # use contact exist method
+        user_exists = User.user_exist("Jane")
+        
+        self.assertTrue(user_exists)
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
         
