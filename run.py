@@ -124,3 +124,34 @@ Use these short codes to get around''')
         '''
         Loop that is running the entire application
         '''
+
+        print('''   Short codes:
+        cu - create a Password Locker account \n
+        du - display names of current Password Locker users \n
+        lg - log into your Password Locker account \n
+        ex - exit the Password Locker account''')
+
+        # Get short codes from the user
+        short_code = input().lower()
+
+        if short_code == 'cu':
+            '''
+            Creating a Password Locker account
+            '''
+
+            print("\n")
+            print("New Password Locker Account")
+            print("-"*10)
+
+            print("User name ...")
+            user_name = input()
+
+            print("Password ...")
+            user_password = input()
+
+            # Create and save new user
+            save_users( create_user( user_name, user_password) )
+
+            print("\n")
+            print(f"{user_name} welcome to Password Locker")
+            print("\n")
