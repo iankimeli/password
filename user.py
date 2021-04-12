@@ -68,3 +68,45 @@ class User:
             Credential list for the user that matches the name and password
             False: if the name or password is incorrect
         '''
+
+
+        # Search for the user in the user list
+        for user in cls.user_list:
+            if user.user_name == name and user.user_password == password:
+                return Credential.credential_list
+
+        return False
+
+    @classmethod
+    def display_user(cls):
+        '''
+        Method that returns the user list
+        '''
+        
+        return cls.user_list
+    
+    @classmethod
+    def user_exist(cls, name):
+        '''
+        Method that checks if a user exists in the user list
+        
+        Args:
+            name: name of the user to search
+            
+        Returns:
+            Boolean: true/false depending if the user exists
+            
+        '''
+        
+        for user in cls.user_list:
+            if user.user_name == name:
+                return True
+            
+        return False
+
+
+
+
+
+
+
