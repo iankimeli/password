@@ -46,3 +46,43 @@ class TestUser(unittest.TestCase):
         '''
         Test case to test if the user object is saved into the user list
         '''
+
+        # Saving the new user
+        self.new_user.save_user()
+
+        self.assertEqual( len(User.user_list), 1 )
+
+    def test_save_multiple_users(self):
+        '''
+        Test case to test if you can save multiple objects to user list
+        '''
+
+        # Save the new user
+        self.new_user.save_user()
+
+        test_user = User("Jane","doey")
+
+        test_user.save_user()
+
+        self.assertEqual( len(User.user_list), 2)
+
+    def test_find_credential(self):
+        '''
+        Test case to test if the User module is importing from Credential module
+        '''
+
+        # Save the new user
+        self.new_user.save_user()
+
+        test_user = User("Jane","doey")
+
+        test_user.save_user()
+
+        found_credential = User.find_credential("Yahoo")
+
+        self.assertEqual( found_credential, False )
+
+    def test_log_in(self):
+        '''
+        Test case to test if a user can log into their credentials
+        '''
