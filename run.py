@@ -100,3 +100,27 @@ def display_credentials(password):
 
     return Credential.display_credential(password)
 
+
+def create_generated_password(name):
+    '''
+    Function that generates a password for the user 
+
+    Args:
+        name : the name of the account
+    '''
+    password = Credential.generate_password()
+
+    return password
+
+def main():
+    '''
+    Function running the Password Locker app
+    '''
+
+    print('''Welcome to Password Locker \n
+Use these short codes to get around''')
+
+    while True:
+        '''
+        Loop that is running the entire application
+        '''
